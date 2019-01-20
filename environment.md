@@ -11,7 +11,7 @@
 * 3. [ 替换国内的源 （阿里的源）](#-1)
 * 4. [安装k8s](#k8s)
 
-##  1. <a name='ssh'></a> （可选）安装ssh 
+##  1. <a name='ssh'></a> （可选）安装 ```ssh``` 
 
 <small>*如果你需要使用远程ssh工具使用系统的话*</small>
 
@@ -22,21 +22,21 @@ sudo ps -e |grep ssh # 查看ssh服务是否启动
 
 ###  1.1. <a name=''></a>问题
 
-####  1.1.1. <a name='ubuntusshaccessdenied'></a>ubuntu安装好后 ssh进入出错 access denied
+####  1.1.1. <a name='ubuntusshaccessdenied'></a> ```ubuntu``` 安装好后 ```ssh``` 进入出错 ```access denied```
 
-修改ssh配置文件：
+修改 ```ssh``` 配置文件：
 
 ```bash
 vi /etc/ssh/sshd_config
 ```
 
-将其中的 *PermitRootLogin without-password* 注释掉， 然后新增 *PermitRootLogin yes*。 最后重启一下ssh服务：
+将其中的 ```PermitRootLogin without-password``` 注释掉， 然后新增 ```PermitRootLogin yes```。 最后重启一下ssh服务：
 
 ```bash
 service ssh restart
 ```
 
-##  2. <a name='vim'></a> （可选）安装vim
+##  2. <a name='vim'></a> （可选）安装 ```vim```
 
 ```bash
 sudo apt-get install vim
@@ -63,7 +63,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main multiverse restri
 deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main multiverse restricted universe
 ```
 
-##  4. <a name='k8s'></a>安装k8s
+##  4. <a name='k8s'></a>安装 ```k8s```
 
 > 参考地址： [kubernetes安装（国内环境）- k8s启示录](https://zhuanlan.zhihu.com/p/46341911)
 

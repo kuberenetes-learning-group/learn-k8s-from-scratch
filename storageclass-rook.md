@@ -1,8 +1,8 @@
 # [Rook项目](https://rook.github.io/docs/rook/master/) <small>-- 使用默认storageclass</samll>
 
-一般来说，我们需要为k8s配置一个默认的storageclass<sup> [[1]](#ref-1)</sup> ; 这样在安装一些项目的时候，省去了配置pv和storageclass的麻烦。
+一般来说，我们需要为k8s配置一个默认的 ```storageclass``` <sup> [[1]](#ref-1)</sup> ; 这样在安装一些项目的时候，省去了配置 ```pv``` 和 ```storageclass``` 的麻烦。
 
-因此介绍一下存储编排项目 rook <sup>[[2](#ref-2)]</sup>;
+因此介绍一下存储编排项目 ```rook``` <sup>[[2](#ref-2)]</sup>;
 
 * 1. [安装](#)
 * 2. [使用Ceph存储](#Ceph)
@@ -10,15 +10,15 @@
 
 ##  1. <a name=''></a>安装
 
-虽然Rook项目支持多种存储系统，但是从目前的开发进度来看，对于Ceph的支持最为完善。所以本文主要介绍基于Ceph的Rook安装。
+虽然 ```Rook``` 项目支持多种存储系统，但是从目前的开发进度来看，对于 ```Ceph``` 的支持最为完善。所以本文主要介绍基于 ```Ceph``` 的 ```Rook``` 安装。
 
-1. 下载Rook源码
+1. 下载 ```Rook``` 源码
 
 ```bash
 git clone https://github.com/rook/rook.git
 ```
 
-2. 部署 Rook Operator
+2. 部署 ```Rook Operator```
 
 ```bash
 cd rook/cluster/examples/kubernetes/ceph/
@@ -41,7 +41,7 @@ rook-ceph-operator-67f4b8f67d-9r48q   1/1     Running   0          47m
 rook-discover-qqgf7                   1/1     Running   0          2m13s
 ```
 
-3. 创建 Rook Cluster
+3. 创建 ```Rook Cluster```
 
 ```bash
 kubectl create -f cluster.yaml
@@ -65,9 +65,9 @@ rook-ceph-osd-0-7f7dd474dc-srlvw      1/1     Running     0          25s
 rook-ceph-osd-prepare-promote-rsqpn   0/2     Completed   0          32s
 ```
 
-##  2. <a name='Ceph'></a>使用Ceph存储
+##  2. <a name='Ceph'></a>使用 ```Ceph``` 存储
 
-1. 创建Block存储
+1. 创建 ```Block``` 存储
 
 > storageclass.yaml
 
@@ -98,7 +98,7 @@ parameters:
  kubectl create -f storageclass.yaml
 ```
 
-2. 将Rook创建的storageclass设置成默认
+2. 将 ```Rook``` 创建的 ```storageclass``` 设置成默认
 
 首先检查是否创建成功：
 
@@ -113,13 +113,13 @@ NAME              PROVISIONER          AGE
 rook-ceph-block   ceph.rook.io/block   2m
 ```
 
-然后使用下面的命令设置成默认的storageclass：
+然后使用下面的命令设置成默认的 ```storageclass``` ：
 
 ```bash
 kubectl patch storageclass rook-ceph-block -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
-然后继续用上面的命令可以看到rook-ceph-block已经被设置成默认的storageclass了：
+然后继续用上面的命令可以看到 ```rook-ceph-block``` 已经被设置成默认的 ```storageclass``` 了：
 
 ```
 NAME                        PROVISIONER          AGE
