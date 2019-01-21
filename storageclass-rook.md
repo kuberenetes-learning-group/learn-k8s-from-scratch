@@ -1,4 +1,4 @@
-# [Rook项目](https://rook.github.io/docs/rook/master/) <small>-- 使用默认storageclass</samll>
+# [Rook项目](https://rook.github.io/docs/rook/master/) <small>-- 使用默认storageclass</small>
 
 一般来说，我们需要为k8s配置一个默认的 ```storageclass``` <sup> [[1]](#ref-1)</sup> ; 这样在安装一些项目的时候，省去了配置 ```pv``` 和 ```storageclass``` 的麻烦。
 
