@@ -8,3 +8,5 @@
 * [工具](tools.md)
 
 **持续更新，如果喜欢的话，欢迎star**
+
+*<small>欢迎关注专栏 [k8s启示录](https://zhuanlan.zhihu.com/kubernetes-docker)</small> , 会不断更新k8s和docker方面的内容。*
