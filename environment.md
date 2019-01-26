@@ -30,7 +30,7 @@ sudo ps -e |grep ssh # 查看ssh服务是否启动
 vi /etc/ssh/sshd_config
 ```
 
-将其中的 ```PermitRootLogin without-password``` 注释掉， 然后新增 ```PermitRootLogin yes```。 最后重启一下ssh服务：
+将其中的 ```PermitRootLogin prohibit-password``` 注释掉， 然后新增 ```PermitRootLogin yes```。 最后重启一下ssh服务：
 
 ```bash
 service ssh restart
@@ -66,7 +66,3 @@ deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main multiverse restric
 ##  4. <a name='k8s'></a>安装 ```k8s```
 
 > 参考地址： [kubernetes安装（国内环境）- k8s启示录](https://zhuanlan.zhihu.com/p/46341911)
-
-*<small>欢迎关注专栏 [k8s启示录](https://zhuanlan.zhihu.com/kubernetes-docker)</small> , 会不断更新k8s和docker方面的内容。*
-
-至此，我们的基本环境算是搭建完成了。
