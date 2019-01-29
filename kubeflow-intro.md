@@ -1,6 +1,6 @@
 # 再谈 Kubeflow
 
-在 [Kubeflow](Kubeflow.md) 中， 已经介绍了 `Kubeflow` 的安装， 那么在使用前，我们应该先知道 `Kubeflow` 是什么， 以及可我们为什么需要使用 `Kubeflow` 。
+在 [Kubeflow](kubeflow.md) 中， 已经介绍了 `Kubeflow` 的安装， 那么在使用前，我们应该先知道 `Kubeflow` 是什么， 以及可我们为什么需要使用 `Kubeflow` 。
 
 那么这一次我尝试从我的角度来谈一谈这个。
 
