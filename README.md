@@ -6,6 +6,7 @@
 * [Rook项目 -- 使用默认storageclass](storageclass-rook.md)
 * [Kubeflow](kubeflow.md)
 * [再谈Kubeflow](kubeflow-intro.md)
+* [Arena](arena.md)
 * [工具](tools.md)
 
 **持续更新，如果喜欢的话，欢迎star**
