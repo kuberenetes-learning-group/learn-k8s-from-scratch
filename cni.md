@@ -54,7 +54,7 @@
 
 &emsp;&emsp;从上面来看，*Kubelet* 和 *container runtime*进行通信时，*Kubelet* 作为客户端， *CRI*作为服务端，双方通过 *protocol buffers* 进行通信（unix套接字或者gRPC框架）。而 *protocol buffers API*中主要包含了两个服务: *ImageService* 和 *RuntimeService*， 其中 *ImageService* 主要针对镜像，包括镜像的拉取，查看和删除。 *RuntimeService* 主要是针对 *Pod* 和容器， 包括Pod的运行，删除，查看和容器的创建，运行，删除等。所以 *container runtime* 只需要实现对应的接口并提供相应的该服务就可以了。
 
-比如 *containerd* ：
+比如 *containerd* 和 *Docker* ：
 
 ![containerd](img/containerd.png)
 

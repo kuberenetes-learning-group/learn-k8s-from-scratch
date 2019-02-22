@@ -2,12 +2,18 @@
 
 **使用环境**：为了更好的普及，主要使用的是国内的网络环境（未翻墙），并且是单电脑开发，使用VMWare来搭建服务器。
 
+## 环境
+
 * [环境搭建](environment.md)
 * [Rook项目 -- 使用默认storageclass](storageclass-rook.md)
 * [Kubeflow](kubeflow.md)
 * [再谈Kubeflow](kubeflow-intro.md)
 * [Arena](arena.md)
 * [工具](tools.md)
+
+## Kubernetes组件
+
+* [CNI](cni.md)
 
 **持续更新，如果喜欢的话，欢迎star**
 
