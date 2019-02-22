@@ -13,7 +13,7 @@
 
 ## Kubernetes组件
 
-* [CNI](cni.md)
+* [CRI](cri.md)
 
 **持续更新，如果喜欢的话，欢迎star**
 

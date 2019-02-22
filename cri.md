@@ -1,6 +1,6 @@
-# CNI  <small>(container runtime interface)</small>
+# CRI  <small>(container runtime interface)</small>
 
-&emsp;&emsp;今天我们来讲一下 *Kubernetes* 中非常重要的一个模块： *CNI* , *CNI* 是 *container runtime interface* 的简称，看名字我们可以看出和 *container runtime* 有很大的关系，所以为了更好的理解 *CNI*， 我们先讲一下 *container runtime*。
+&emsp;&emsp;今天我们来讲一下 *Kubernetes* 中非常重要的一个模块： *CRI* , *CRI* 是 *container runtime interface* 的简称，看名字我们可以看出和 *container runtime* 有很大的关系，所以为了更好的理解 *CRI*， 我们先讲一下 *container runtime*。
 
 ## 什么是 *container runtime*
 
