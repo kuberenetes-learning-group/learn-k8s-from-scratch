@@ -65,6 +65,16 @@ echo "source <(arena completion bash)" >> ~/.bashrc
 find /charts/ -name values.yaml| xargs sed -i "s/Always/IfNotPresent/g"
 ```
 
+* （可选）如果需要查看 `job` 的 `GPU` 资源， 需要进行下面的安装步骤：
+
+```bash
+kubectl apply -f kubernetes-artifacts/prometheus/prometheus.yaml # 安装prometheus
+
+kubectl label node <your GPU node> accelerator/nvidia_gpu=true # 非Alibaba Cloud kubernetes
+
+kubectl apply -f kubernetes-artifacts/prometheus/gpu-exporter.yaml # 部署gpu exporter
+```
+
 ## 使用 `Arena`
 
 安装完 `Arena` 之后，就可以使用 `Arena` 来运行训练任务了。目前 `Arena` 支持很多功能，这里来简单介绍下其中比较重要的功能：
