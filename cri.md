@@ -16,7 +16,7 @@
 * 镜像的共享 (docker push/pull)
 * 运行容器 (docker run)
 
-&emsp;&emsp;这个时候的 *Docker* 是一个体积庞大的系统，对于其他系统想要使用 *Docker*， 就必须使用 *Docker* 的全部功能，这显然不是很友好，那么能不能将 *Docker* 里面的模块拆分出来呢？答案是肯定的，首先从上面的功能可以看出，每个模块基本都是独立的，对其他模块的依赖并不是很高，而且功能也没有太多重叠。所以基于此，*Docker*, *Google*, *CoreOS*等公司就成立了 *Open Container Intiative(OCI)* 组织，指定镜像和容器的一下标准，所以在一些 *container runtime* 中我们会看到 *"符合OCI标准"* 的字样。然后 *Docker*将其中运行容器的部分拿了出来并贡献给了 *OCI* 作为 *runtime spec* 的具体实现，也就是 *runc*， 这就是 *container runtime* 的由来。
+&emsp;&emsp;这个时候的 *Docker* 是一个体积庞大的系统，对于其他系统想要使用 *Docker*， 就必须使用 *Docker* 的全部功能，这显然不是很友好，那么能不能将 *Docker* 里面的模块拆分出来呢？答案是肯定的，首先从上面的功能可以看出，每个模块基本都是独立的，对其他模块的依赖并不是很高，而且功能也没有太多重叠。所以基于此，*Docker*, *Google*, *CoreOS*等公司就成立了 *Open Container Intiative(OCI)* 组织，指定镜像和容器的标准，所以在一些 *container runtime* 中我们会看到 *"符合OCI标准"* 的字样。然后 *Docker*将其中运行容器的部分拿了出来并贡献给了 *OCI* 作为 *runtime spec* 的具体实现，也就是 *runc*， 这就是 *container runtime* 的由来。
 
 &emsp;&emsp;到这问题开始出来了， *Docker* 贡献的只有 “运行容器”， 其他的并没有贡献出来，像镜像的格式、仓库推送拉取的格式等等。而且更为重要的是， *Docker* 并没有贡献“运行容器”的全部内容。一般来说，运行一个容器的过程分为三步:
 
