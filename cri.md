@@ -26,7 +26,7 @@
 
 &emsp;&emsp;你可能想到了， *Docker* 只贡献了第三部的标准，一开始所有人都认为 *container runtime*应该支持 *Docker*的全部功能，所以最终 *Docker* 不得不更改声明， *container runtime*仅仅指 “运行容器”。这个也就是争论的由来，对于 *container runtime*是应该仅支持运行容器还是包含更多，不同的人有不同的说法，双方都没有错，所以对于什么是 *container runtime* 究竟是什么，你的看法是什么呢？
 
-&emsp;&emsp;基于是支持容器的运行还是其他的功能，我们将 *container runtime*分成两种：Low-Leve了和 High-Level。
+&emsp;&emsp;基于是支持容器的运行还是其他的功能，我们将 *container runtime*分成两种：*Low-Level* 和 *High-Level*。
 
 ![container runtime level](img/container-runtime-level.png)
 
@@ -36,7 +36,7 @@
 
 ### High-Level
 
-&emsp;&emsp;那么对于 *High-Level* 的 *container runtime*，负责的是更为高级的容器功能，比如镜像的传输和管理，镜像的解压然后供 *Low-Level* 的 *container runtime* 使用。通常， *High-Level* 的 *container runtime* 提供了一个守护进程，供远程程序来运行容器和查看容器状态。当然有些 *High-Level* 的 *container runtime* 提供了和 *Low-Level* 类似的功能，但是这些功能可以跨容器使用，比如管理 *Network namepsaces*，是的容器可以加入另一个容器的网络。
+&emsp;&emsp;那么对于 *High-Level* 的 *container runtime*，负责的是更为高级的容器功能，比如镜像的传输和管理，镜像的解压然后供 *Low-Level* 的 *container runtime* 使用。通常， *High-Level* 的 *container runtime* 提供了一个守护进程，供远程程序来运行容器和查看容器状态。当然有些 *High-Level* 的 *container runtime* 提供了和 *Low-Level* 类似的功能，但是这些功能可以跨容器使用，比如管理 *Network namepsaces*，使得容器可以加入另一个容器的网络。
 
 &emsp;&emsp;下面是他们之间的关系：
 
