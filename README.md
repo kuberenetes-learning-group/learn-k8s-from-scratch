@@ -14,6 +14,7 @@
 ## Kubernetes组件
 
 * [CRI](cri.md)
+* [Device Plugin](https://github.com/chison-medical-technologies/fuse-device-plugin)
 
 **持续更新，如果喜欢的话，欢迎star**
 
