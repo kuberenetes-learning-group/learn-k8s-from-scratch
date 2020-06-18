@@ -16,6 +16,11 @@
 * [CRI](cri.md)
 * [Device Plugin](https://github.com/chison-medical-technologies/fuse-device-plugin)
 
+## 云原生架构
+
+* [云原生架构的基石](cloud-native-design-pattern/chapter01.md)
+*  [云原生如何来进行HTTPS升级](cloud-native-design-pattern/chapter02.md)
+
 **持续更新，如果喜欢的话，欢迎star**
 
 *<small>欢迎关注专栏 [k8s启示录](https://zhuanlan.zhihu.com/kubernetes-docker)</small> , 会不断更新k8s和docker方面的内容。*
