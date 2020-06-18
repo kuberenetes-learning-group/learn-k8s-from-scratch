@@ -1,7 +1,7 @@
 # 云原生架构的基石
 
 时至今日，如果要问后端最为热门的词语是什么？那么云原生至少会出现在许多人的答案中。从Docker到Kubernetes，再到目前火热的CNCF基金会，云原生技术已经越发成熟和强大。<br />
-<br />![landscape.png](https://cdn.nlark.com/yuque/0/2020/png/783466/1591956506953-87aaf122-0693-4b77-8b87-0677c38ccdfe.png#align=left&display=inline&height=4380&margin=%5Bobject%20Object%5D&name=landscape.png&originHeight=4380&originWidth=7660&size=6358733&status=done&style=none&width=7660)<br />
+<br />![landscape.png](../img/cncf-landscape.png)<br />
 <br />随着云原生的不断发展，后端服务正在转向 "**面向云原生架构**" ,而云原生的架构思路就来自于云原生的基石：**容器技术**。所以在我们继续之后的云原生架构设计之前，我们来首先了解云原生和容器技术以及为什么容器的设计对云原生架构有这么大的影响。
 <a name="0OtmH"></a>
 # 云原生
